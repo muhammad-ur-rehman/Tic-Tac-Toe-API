@@ -1,4 +1,4 @@
-# app/models/game.rb
+
 class Game < ApplicationRecord
   WINNING_CONDITIONS = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], # Rows
@@ -23,7 +23,7 @@ class Game < ApplicationRecord
         return values.first
       end
     end
-    return "draw" if !state.include?("-")
+    return 'draw' if !state.include?("-")
     nil
   end
 end
